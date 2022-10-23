@@ -1,10 +1,16 @@
 Generate Kali Chroot
 ---
 
+Install needs:
+
+```
+$ sudo apt install debootstrap gpg
+```
+
 First use gen.sh script:
 
 ```
-$ gen.sh <size as GB>
+$ bin/gen.sh <size as GB>
 ```
 
 Generated current.txt and KLM image.
@@ -13,7 +19,7 @@ Generated current.txt and KLM image.
 After run root.sh
 
 ```
-root.sh
+$ bin/root.sh
 ```
 
 Enter chroot and work with kali. CTRL+C and exit with write changes.
@@ -21,17 +27,17 @@ Enter chroot and work with kali. CTRL+C and exit with write changes.
 If you need encrypt image;
 
 ```
-enc.sh
+$ bin/enc.sh
 ```
 
 If you need decrypt image;
 
 ```
-dec.sh
+$ bin/dec.sh
 ```
 
 If you need house clean and wipe all images;
 
 ```
-houseclean.sh
+$ bin/houseclean.sh
 ```
