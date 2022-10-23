@@ -14,6 +14,7 @@ mkdir -p KLM$IMGSTR
 sudo mount -o loop KLM$IMGSTR.img KLM$IMGSTR
 echo "Bootstrap: KLM$IMGSTR.img"
 sudo debootstrap --foreign --arch amd64 kali-rolling KLM$IMGSTR http://http.kali.org/kali
+run-as-chroot KLM$IMGSTR "/bin/apt install -y kali-defaults kali-archive-keyring"
 echo "Umount: KLM$IMGSTR.img"
 sudo umount -l KLM$IMGSTR
 sudo rm -rf KLM$IMGSTR
